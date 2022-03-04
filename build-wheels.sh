@@ -18,6 +18,7 @@ for PYBIN in /opt/python/cp3*/bin; do
   fi
   rm -rf build
   source $HOME/.poetry/env
+  poetry env use ${PYBIN}/python
   "${PYBIN}/python" $HOME/.poetry/bin/poetry build -vvv
 done
 
