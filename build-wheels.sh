@@ -7,6 +7,7 @@ export PATH=/opt/python/cp38-cp38/bin/:$PATH
 
 curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
 /opt/python/cp38-cp38/bin/python get-poetry.py --preview -y
+export PATH=/root/.local/bin:$PATH
 rm get-poetry.py
 
 for PYBIN in /opt/python/cp3*/bin; do
