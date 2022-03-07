@@ -31,6 +31,7 @@ for PYBIN in /opt/python/cp3*/bin; do
   export PATH=/root/.local/bin:$PATH
   python --version
   poetry build -vvv
+  python install-poetry.py --uninstall --preview -y
   deactivate
   rm -rf .env/
   #poetry env remove ${PYBIN}/python
