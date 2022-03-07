@@ -21,7 +21,7 @@ for PYBIN in /opt/python/cp3*/bin; do
     continue
   fi
   rm -rf build
-  "${PYBIN}/python" poetry build -vvv
+  "${PYBIN}/python" /root/.local/bin/poetry build -vvv
   #"${PYBIN}/python" $HOME/.poetry/bin/poetry build -vvv
 done
 
