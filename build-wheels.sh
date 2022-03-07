@@ -10,7 +10,8 @@ export PATH=/opt/python/cp38-cp38/bin/:$PATH
 #rm get-poetry.py
 curl -fsS -o install-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/install-poetry.py
 /opt/python/cp38-cp38/bin/python install-poetry.py --preview -y
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH=/root/.local/bin:$PATH
+#export PATH="$HOME/.poetry/bin:$PATH"
 
 for PYBIN in /opt/python/cp3*/bin; do
   if [ "$PYBIN" == "/opt/python/cp34-cp34m/bin" ]; then
