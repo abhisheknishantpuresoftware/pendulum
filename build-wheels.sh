@@ -12,6 +12,8 @@ curl -fsS -o install-poetry.py https://raw.githubusercontent.com/sdispater/poetr
 /opt/python/cp310-cp310/bin/python install-poetry.py --preview -y
 export PATH="/root/.local/bin:$PATH"
 
+$HOME/.poetry/bin/poetry --version
+
 for PYBIN in /opt/python/cp3*/bin; do
   if [ "$PYBIN" == "/opt/python/cp34-cp34m/bin" ]; then
     continue
