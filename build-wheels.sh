@@ -3,13 +3,13 @@ set -e -x
 
 cd $(dirname $0)
 
-export PATH=/opt/python/cp38-cp38/bin/:$PATH
+export PATH=/opt/python/cp310-cp310/bin/:$PATH
 
 #curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
 #/opt/python/cp38-cp38/bin/python get-poetry.py --preview -y --version 1.1.13
 #rm get-poetry.py
 curl -fsS -o install-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/install-poetry.py
-/opt/python/cp38-cp38/bin/python install-poetry.py --preview -y
+/opt/python/cp310-cp310/bin/python install-poetry.py --preview -y
 export PATH=/root/.local/bin:$PATH
 #export PATH="$HOME/.poetry/bin:$PATH"
 
@@ -21,7 +21,7 @@ for PYBIN in /opt/python/cp3*/bin; do
     continue
   fi
   rm -rf build
-  poetry env use ${PYBIN}/python
+  #poetry env use ${PYBIN}/python
   poetry build -vvv
   #"${PYBIN}/python" $HOME/.poetry/bin/poetry build -vvv
 done
