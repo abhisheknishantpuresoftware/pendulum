@@ -9,8 +9,8 @@ export PATH=/opt/python/cp38-cp38/bin/:$PATH
 #/opt/python/cp38-cp38/bin/python get-poetry.py --preview -y --version 1.1.13
 #rm get-poetry.py
 curl -fsS -o install-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/install-poetry.py
-/opt/python/cp38-cp38/bin/python install-poetry.py --preview -y --version 1.0.10
-export PATH=/root/.local/bin:$PATH
+
+#export PATH=/root/.local/bin:$PATH
 #export PATH="$HOME/.poetry/bin:$PATH"
 
 for PYBIN in /opt/python/cp3*/bin; do
@@ -27,6 +27,8 @@ for PYBIN in /opt/python/cp3*/bin; do
   #poetry env use ${PYBIN}/python
   ${PYBIN}/python -m venv .env
   source .env/bin/activate
+  python install-poetry.py --preview -y
+  export PATH=/root/.local/bin:$PATH
   python --version
   poetry build -vvv
   deactivate
