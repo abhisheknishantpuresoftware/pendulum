@@ -21,7 +21,7 @@ for PYBIN in /opt/python/cp3*/bin; do
     continue
   fi
   rm -rf build
-  #poetry env use ${PYBIN}/python
+  poetry env use ${PYBIN}/python
   poetry build -vvv
   poetry env remove ${PYBIN}/python
   #"${PYBIN}/python" $HOME/.poetry/bin/poetry build -vvv
