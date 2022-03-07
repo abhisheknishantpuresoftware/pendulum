@@ -32,7 +32,7 @@ for PYBIN in /opt/python/cp3*/bin; do
   python --version
   poetry build -vvv
   deactivate
-  rm -r venv/
+  rm -rf .env/
   #poetry env remove ${PYBIN}/python
   #"${PYBIN}/python" $HOME/.poetry/bin/poetry build -vvv
 done
